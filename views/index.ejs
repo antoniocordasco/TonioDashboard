@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Antonio's dashboard</title>
+        <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    </head>
+    <body>
+        <h1>Welcome to Antonio's dashboard</h1>
+        <h2>Today's weather in <%= weather.location.name %></h2>
+        <p>Condition: <%= weather.current.condition.text %></p>
+        <p>Temperature: <%= weather.current.temp_c %> c</p>
+        <p>Perceived temperature: <%= weather.current.feelslike_c %> c</p>
+        <p>Humidity: <%= weather.current.humidity %>%</p>
+
+        <h2>Exchange rates</h2>
+        <p>1 GBP = <%= exchangeRates.rates.EUR %> EUR</p>
+        <p>1 GBP = <%= exchangeRates.rates.USD %> USD</p>
+    </body>
+</html>
