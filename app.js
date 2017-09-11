@@ -1,10 +1,13 @@
 var express = require('express');
+var expressLess = require('express-less');
 var http = require('http');
+
 var app = express();
 
 var port = process.env.PORT || 3000;
 
 app.use('/assets', express.static(__dirname + '/public/assets'));
+app.use('/less-css', expressLess(__dirname + '/less'));
 
 app.set('view engine', 'ejs');
 
